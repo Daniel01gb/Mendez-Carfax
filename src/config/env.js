@@ -1,0 +1,11 @@
+require('dotenv').config();
+
+module.exports = {
+  TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN,
+  SQUARE_ACCESS_TOKEN: process.env.SQUARE_ACCESS_TOKEN,
+  SQUARE_LOCATION_ID: process.env.SQUARE_LOCATION_ID,
+  SQUARE_WEBHOOK_SIGNATURE_KEY: process.env.SQUARE_WEBHOOK_SIGNATURE_KEY,
+  CARFAX_API_KEY: process.env.CARFAX_API_KEY,
+  DATABASE_URL: process.env.DATABASE_URL,
+  PORT: process.env.PORT || 3000,
+};
