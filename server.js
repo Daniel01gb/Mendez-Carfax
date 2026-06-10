@@ -31,7 +31,7 @@ app.post('/webhook/square', express.raw({ type: 'application/json' }), async (re
     return res.status(400).send('Invalid JSON');
   }
 
-  if (event.type === 'payment.completed') {
+  if (event.type === 'payment.updated' && event.data?.object?.payment?.status === 'COMPLETED') {
     const orderId = event.data?.object?.payment?.order_id;
     if (orderId) {
       try {
